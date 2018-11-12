@@ -6,7 +6,7 @@ This project is created in regards to have a simple API to deal with a news data
 - **log-output.txt:** sample output
 - **db-tables:** a description of the tables in the database
 
-##Dependencies
+## Dependencies
 You need to install python `psycopg2` module
 `pip3 install psycopg2`
 
