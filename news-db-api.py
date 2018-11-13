@@ -3,10 +3,25 @@
 import psycopg2
 import datetime
 
+
+def connect(database_name):
+    """
+     Connect to the PostgreSQL database.
+     Return a database connection.
+     """
+    try:
+        db = psycopg2.connect("dbname={}".format(database_name))
+        cursor = db.cursor()
+        return db, cursor
+    except psycopg2.Error as err:
+        print ("Unable to connect to the database")
+        print(err)
+        sys.exit(1)
+
+
 # intializing database connection
 DBNAME = "news"
-db = psycopg2.connect(database=DBNAME)
-c = db.cursor()
+db, c = connect(DBNAME)
 
 
 # What are the most popular three articles of all time?
@@ -46,7 +61,8 @@ def pop_auths():
 
 # On which days did more than 1% of requests lead to errors?
 def error_rate():
-    c.execute("""select * from(select t_requests.day,
+    c.execute("""select * from
+    (select t_requests.day,
     round((t_errors.errors*100)/cast(t_requests.requests as numeric),2)
     as err_rate
     from
@@ -67,9 +83,10 @@ def error_rate():
         print ("%s -- %.2f%%" % (row[0].strftime("%b %d, %Y"), row[1]))
 
 
-top_articles()
-print()
-pop_auths()
-print()
-error_rate()
-db.close()
+if __name__ == '__main__':
+    top_articles()
+    print()
+    pop_auths()
+    print()
+    error_rate()
+    db.close()
