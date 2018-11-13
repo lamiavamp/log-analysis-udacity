@@ -8,7 +8,7 @@ The provided `news-db-api.py` script query the database to answer the folwwoing 
 
 ## Getting Started
 
-## Content
+### Content
 - **news-db-api.py:** postgress API to the database
 - **log-output.txt:** sample output
 - **db-tables:** a description of the tables in the database
