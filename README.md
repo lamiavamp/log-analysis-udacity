@@ -6,12 +6,12 @@ The provided `news-db-api.py` script query the database to answer the folwwoing 
 2. Who are the most popular article authors of all time?
 3. On which days did more than 1% of requests lead to errors?
 
-## Getting Started
-
 ### Content
 - **news-db-api.py:** postgress API to the database
 - **log-output.txt:** sample output
 - **db-tables:** a description of the tables in the database
+
+## Getting Started
 
 ### Prerequissites
 - The code is running on python3, make sure it is installed. To install `python3` in Mac use homebrew: 
