@@ -17,16 +17,16 @@ The provided `news-db-api.py` script query the database to answer the folwwoing 
 - The code is running on python3, make sure it is installed. To install `python3` in Mac use homebrew: 
 `$ brew install python3`
 or follow [this link](https://realpython.com/installing-python) for other OS 
-- You need to install python `psycopg2` module:
-`pip3 install psycopg2`
+- You need to install python `psycopg2` module using:
+`$ pip3 install psycopg2`
 
 ### Installation
-* clone the repository using git
+* Clone the repository using git
 `$ git clone https://github.com/lamiavamp/log-analysis-udacity.git`
 `$ cd log-analysis-udacity`
 
-* download the databse using [this link](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
-* unzip the file and run the following command to import it into the database
+* Download the databse using [this link](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+* Unzip the file and run the following command to import it into the database
 `$ psql -d news -f newsdata.sql`
 
 ### Usage
