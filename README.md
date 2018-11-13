@@ -18,6 +18,9 @@ Running the code produces *three* outputs answering these questions:
 `$ brew install python3`
 or follow [this link](https://realpython.com/installing-python) for other OS 
 - You need to install python `psycopg2` module:
+
+## Dependencies
+You need to install python `psycopg2` module
 `pip3 install psycopg2`
 
 ### Installation
@@ -35,3 +38,4 @@ Simply run the following script to get the results
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
